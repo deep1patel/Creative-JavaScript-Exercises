@@ -1,0 +1,16 @@
+#content{
+    margin: 15px auto;
+    max-width: 800px;
+}
+
+label{
+    display: block;
+    margin: 10px auto 0 auto;
+}
+button{
+    margin: 10px auto 0 auto;
+}
+
+p{
+    margin: auto;
+}
