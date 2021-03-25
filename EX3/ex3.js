@@ -1,34 +1,22 @@
-document.getElementById("calculate").addEventListener("click", connector);
+function func() { 
+    var x = document.getElementById("mytxt").value; 
+  
+    var reverse = 0;
+    var temp = x; //temporary place holder to be used in if statement
+    var response; //variable to capture response from if statements
+    var indnum; //place holder to hold digits.
 
-
-function connector(){
-
-    var a = document.getElementById("num1").value;
-    
-    if(isPalindrome(a)){
-        document.getElementById("result").innerHTML = "yes";
-        
+    while(x >0){
+      indnum= x%10;
+      reverse = (reverse*10)+indnum;
+      x = parseInt(x/10);
     }
-    else{
-        document.getElementById("result").innerHTML="no";
+    if(reverse == temp ){
+      response = "Yes";
     }
+    else if(reverse != temp){
 
-}
-
-function isPalindrome(a){
-    //solved by taking advantage of js dynamic typing
-    //check a is a positive number
-    if (a == "" || isNaN(a)){
-        alert("Invalid input. Please enter a number")
-        return
+      response = "No";
     }
-
-    //treat number as string and see if its a palindrome
-    var stop = Math.trunc(a.length/2);
-    for (let i = 0; i <= stop; i++){
-        if (a[i] != a[a.length - 1 - i]){
-            return false;
-        }
-    }
-    return true;
-}
+      document.getElementById("palin").innerHTML = response;
+     }
