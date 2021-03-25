@@ -1,16 +1,15 @@
-#info{
-    margin: 15px auto;
-    max-width: 800px;
-}
-
-label{
-    display: block;
-    margin: 10px auto 0 auto;
-}
 button{
-    margin: 10px auto 0 auto;
+    color: white;
+    background-color: red;
+    margin: 8px;
+    padding: 10px 12px;
+ 	cursor: pointer;
+ 	font-size: 12px;
 }
 
-p{
-    margin: auto;
+#textBlock{
+    margin: 70px auto;
+    max-width: 500px;
+    text-align: center;
 }
+

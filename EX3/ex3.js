@@ -1,32 +1,23 @@
-document.getElementById("calculate").addEventListener("click", connector);
 
+document.getElementById("determine").addEventListener("click", yesOrNo);
 
-function connector(){
+function yesOrNo(){
 
-    var a = document.getElementById("num1").value;
-    
-    if(isPalindrome(a)){
-        document.getElementById("result").innerHTML = "yes";
-        
-    }
+    var entry = document.getElementById("userInput").value;
+    if(entryIsAPalindrome(entry)){
+        document.getElementById("answer").innerHTML = "yes";}
     else{
-        document.getElementById("result").innerHTML="no";
-    }
-
+        document.getElementById("answer").innerHTML="no";}
 }
 
-function isPalindrome(a){
-    //solved by taking advantage of js dynamic typing
-    //check a is a positive number
-    if (a == "" || isNaN(a)){
-        alert("Invalid input. Please enter a number")
-        return
-    }
+function entryIsAPalindrome(entry){
+    if (entry == "" || isNaN(entry)){
+        window.alert("INVALID ENTRY. Only integers are accepted in this field")
+        return}
 
-    //treat number as string and see if its a palindrome
-    var stop = Math.trunc(a.length/2);
-    for (let i = 0; i <= stop; i++){
-        if (a[i] != a[a.length - 1 - i]){
+    var middle = Math.trunc(entry.length/2);
+    for (let i = 0; i <= middle; i++){
+        if (entry[i] != entry[entry.length - 1 - i]){
             return false;
         }
     }

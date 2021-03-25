@@ -1,23 +1,32 @@
 <html> 
+
     <head>
+
         <meta charset="UTF-8" />
-        <meta name="viewport" main="width=device-width, initial-scale = 1.0" />
-        <meta http-equiv="X-UA-Compatible" main="ie=edge" />
         <link rel = "stylesheet" href ="./ex3.css" />
-        <title>Palindromic Checker</title>
+        <title>Is Your Number A Palindrome?</title>
+
     </head>
+
     <body>
-        <div id = main>
-            <h1>Palindromic Checker</h1>
-            <h3>Please enter your number below:</h3>
+        <div id = textBlock>
+            <h1>Is Your Number A Palindrome?</h1>
+            <h4><i>Enter in a number below to find out!</i></h4>
+
             <form action="">
-                <label>Number: <input type="text" id="num1"></label>
+                <p>Your Number: <input type="text" id="userInput"></p>
             </form>
-            <button id ="calculate">Check</button>
+
+            <button id ="determine"> Determine </button>
+
             <div>
-                <p>Palindromic Check: <span id = "result"></span></p>
+                <p><b>Is This A Palindrome: <span id = "answer"></span></b></p>
             </div>
+
         </div>
+
         <script type = "text/javascript"  src = "ex3.js"></script>
+
     </body>
+
 </html>

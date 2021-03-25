@@ -1,55 +1,56 @@
-document.getElementById("calculate").addEventListener("click", convertor);
+document.getElementById("convertGrade").addEventListener("click", gradeMapper);
 
-function convertor(){
+function gradeMapper(){
 
-    var a = document.getElementById("num1").value
-    var message = "";
+    var userInput = document.getElementById("num1").value
+    var errorPrompt = "";
 
-    //check if inputs are numbers that between 1 and 100 inclusive
-    if (isNaN(a) || a < 1 || a > 100){
-        message += "Invalid entry for grade. Please enter a number between 1 and 100\n"
-
-    } if (message != ""){
-        alert(message);
+    if (isNaN(userInput) || userInput < 1 || userInput > 100) {
+        errorPrompt += "INVALID ENTRY. Enteries must be between 1 to 100"
+    }
+    
+    if (errorPrompt != "") {
+        window.alert(errorPrompt);
     }
 
-    else{
-        var letter;
-        switch(Math.trunc((a*2)/10)){
+    else {
+        var gradeLetter;
+        switch(Math.trunc((userInput*2)/10)){
             case 20:
             case 19:
             case 18:
-                letter = "A+";
+                gradeLetter = " A+ ";
                 break;
             case 17:
             case 16:
-                letter = "A";
+                gradeLetter = " A ";
                 break;
             case 15:
-                letter = "B+";
+                gradeLetter = " B+ ";
                 break;
             case 14:
-                letter = "B";
+                gradeLetter = " B ";
                 break;
             case 13:
-                letter = "C+";
+                gradeLetter = " C+ ";
                 break;
             case 12:
-                letter = "C";
+                gradeLetter = " C ";
                 break;
             case 11:
-                letter = "D+";
+                gradeLetter = " D+ ";
                 break;
             case 10:
-                letter = "D";
+                gradeLetter = " D ";
                 break;
             case 9:
             case 8:
-                letter = "E";
+            
             default:
-                letter = "F";
+                gradeLetter = " F ";
                 break;
         } 
-        document.getElementById("result").innerText = letter;
+
+        document.getElementById("covertedGrade").innerText = gradeLetter;
     }
 }

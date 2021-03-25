@@ -1,54 +1,61 @@
-document.getElementById("calculate").addEventListener("click", counter);
-document.getElementById("reset").addEventListener("click", reset);
 
-var positives = 0;
-negatives = 0
-updateNumbers("reset");
+document.getElementById("compute").addEventListener("click", numberCount);
+document.getElementById("resetToZero").addEventListener("click", resetToZero);
 
-function reset(){
-    document.getElementById("calculate").style.visibility= "visible";
-    positives = 0;
-    negatives = 0;
-    updateNumbers("reset")
+var numberOfNegatives = 0
+
+var numberOfPositives = 0;
+
+currentCount("resetToZero");
+
+
+function resetToZero(){
+
+    document.getElementById("compute").style.visibility= "visible";
+    numberOfPositives = 0;
+    numberOfNegatives = 0;
+    currentCount("resetToZero")
+
 }
 
-function counter(){
 
-    var a = document.getElementById("num1").value
-    var message = "";
+function numberCount(){
 
-    //check if input is number
-    if (a == "" || isNaN(a)){
-        message += "Invalid entry. Please enter a number \n"
+    var userInput = document.getElementById("numberEntry").value
+    var errorPrompt = "";
 
-    } if (message != ""){
-        alert(message);
-    }
+    if (userInput == "" || isNaN(userInput)){
+        errorPrompt += "INVALID ENTRY. Only integers are accepted in this field"}
+    if (errorPrompt != ""){
+        window.alert(errorPrompt);}
 
+  
     else{
-         
-        if(a == "0"){
-            document.getElementById("calculate").style.visibility= "hidden";
-        }
-        else if(a < 0){
-            negatives += 1;
-            updateNumbers("negative");
-        }
-        else if(a>0){
-            positives += 1;
-            updateNumbers("positive");
-        }
+        if(userInput == "0"){
+            document.getElementById("compute").style.visibility= "hidden";}
+        else if(userInput < 0){
+            numberOfNegatives += 1;
+            currentCount("negative");}
+        else if(userInput > 0){
+            numberOfPositives += 1;
+            currentCount("positive");}
+
     }
 }
 
-function updateNumbers(a){
-    if(a =="positive"){
-        document.getElementById("positives").innerText = positives;
-    } else if(a == "negative"){
-        document.getElementById("negatives").innerText = negatives;
-    } else if(a == "reset"){
-        document.getElementById("positives").innerText = positives;
-        document.getElementById("negatives").innerText = negatives;
-    }
-    document.getElementById("total").innerText = positives + negatives;
+
+function currentCount(userInput){
+
+    if(userInput =="positive"){
+        document.getElementById("numberOfPositives").innerText = numberOfPositives;}
+   
+    else if(userInput == "negative"){
+        document.getElementById("numberOfNegatives").innerText = numberOfNegatives;}
+    
+    else if(userInput == "resetToZero"){
+        document.getElementById("numberOfPositives").innerText = numberOfPositives;
+        document.getElementById("numberOfNegatives").innerText = numberOfNegatives;}
+   
+    document.getElementById("numbersTotal").innerText = numberOfPositives + numberOfNegatives;
+
 }

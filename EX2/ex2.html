@@ -1,27 +1,36 @@
-<html> 
+<html>
+
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" main="width=device-width, initial-scale = 1.0" />
-        <meta http-equiv="X-UA-Compatible" main="ie=edge" />
         <link rel = "stylesheet" href ="./ex2.css" />
-        <title>Counter</title>
+        <title>Number Count: Positives and Negatives</title>
     </head>
+
     <body>
-        <div id = main>
-            <h1>Counter</h1>
-            <p>Keeps track of the amount of positive and negative numbers entered.</p>
+
+        <div id = textBlock>
+
+            <h1> Number Count: Positives and Negatives</h1>
+            <h4>Enter in as many numbers as you would like below, and we will keep track of how many positive and negative numbers you have entered.</h4>
+            <h5><i>You can enter in a zero (0) to view your output!</i></h5>
             <form action="">
-                <label>Enter Number: <input type="text" id="num1"></label>
+                <p>Enter Your Numbers One at A Time Here: <input type="text" id="numberEntry"></p>
             </form>
-            <button id ="calculate">Enter</button>
-            <button id ="reset">Reset</button>
+            <button id ="compute">Enter</button>
+            <button id ="resetToZero">Start Over</button>
+
             <div>
-                <p>Total Numbers   : <span id = "total"></span></p>
-                <p>Positive numbers: <span id = "positives"></span></p>
-                <p>Negative numbers: <span id = "negatives"></span></p>
+
+                <p><b>Numbers Entered: <span id = "numbersTotal"></span></br>
+                Number of Positive Inputs: <span id = "numberOfPositives"></span></br>
+                Number of Negative Inputs: <span id = "numberOfNegatives"></span></p></b>
+
             </div>
 
         </div>
+
         <script type = "text/javascript"  src = "ex2.js"></script>
+
     </body>
+
 </html>
