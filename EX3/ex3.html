@@ -1,23 +1,32 @@
-<html> 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" main="width=device-width, initial-scale = 1.0" />
-        <meta http-equiv="X-UA-Compatible" main="ie=edge" />
-        <link rel = "stylesheet" href ="./ex3.css" />
-        <title>Palindromic Checker</title>
-    </head>
-    <body>
-        <div id = main>
-            <h1>Palindromic Checker</h1>
-            <h3>Please enter your number below:</h3>
-            <form action="">
-                <label>Number: <input type="text" id="num1"></label>
-            </form>
-            <button id ="calculate">Check</button>
-            <div>
-                <p>Palindromic Check: <span id = "result"></span></p>
-            </div>
-        </div>
-        <script type = "text/javascript"  src = "ex3.js"></script>
-    </body>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercise 3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="ex3.css">
+ 
+  <script src="ex3.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Plandromic Number Checker</h1>
+    <h3>Please input your number below:</h3>
+<form action="">
+        <label>Number: <input type="text" id="mytxt"></label>
+ </form>
+
+<button type="button" onclick="func()">Check</button>
+<div>
+    <label>Palindromic: <span id = "result"></span></label>
+</div>
+
+<p id="palin"></p>
+</div>
+
+
+</body>
 </html>
