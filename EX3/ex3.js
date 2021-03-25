@@ -26,3 +26,5 @@ function palinDetermine() {
 
 
     document.getElementById("palin").innerHTML = palindromeAnswer;
+   
+}
