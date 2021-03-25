@@ -23,7 +23,7 @@ $(document).ready(function generate(){
 
 	$(".child_div").mouseover(function(){
 		if ($(this).is(':only-child')){
-			alert("Last One!");
+			window.alert("Last One!");
 		}
 		$(this).remove();
 	});
