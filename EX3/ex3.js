@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function func() { 
     var x = document.getElementById("mytxt").value; 
   
@@ -18,30 +17,6 @@ function func() {
     else if(reverse != temp){
 
       response = "No";
-=======
-
-document.getElementById("determine").addEventListener("click", yesOrNo);
-
-function yesOrNo(){
-
-    var entry = document.getElementById("userInput").value;
-    if(entryIsAPalindrome(entry)){
-        document.getElementById("answer").innerHTML = "yes";}
-    else{
-        document.getElementById("answer").innerHTML="no";}
-}
-
-function entryIsAPalindrome(entry){
-    if (entry == "" || isNaN(entry)){
-        window.alert("INVALID ENTRY. Only integers are accepted in this field")
-        return}
-
-    var middle = Math.trunc(entry.length/2);
-    for (let i = 0; i <= middle; i++){
-        if (entry[i] != entry[entry.length - 1 - i]){
-            return false;
-        }
->>>>>>> 93d7693a6bb4e3570acf3406143a1c18e80e0398
     }
       document.getElementById("palin").innerHTML = response;
      }
