@@ -1,32 +1,39 @@
-<!DOCTYPE html>
+
 <html>
 
 <head>
-  <title>Palindromic Checker</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="ex3.css">
- 
-  <script src="ex3.js"></script>
+
+   <meta charset="UTF-8" />
+   <link rel = "stylesheet" href ="./ex3.css" />
+   <title>Is Your Number A Palindrome?</title>
+   <script src="ex3.js"></script>
+
 </head>
+
 <body>
 
-<div class="container">
-    <h1>Palindromic Number Checker</h1>
-    <h3>Please input your number below:</h3>
-<form action="">
-        <label>Number: <input type="text" id="mytxt"></label>
- </form>
+    <div class="textBlock">
+        <h1>Is Your Number A Palindrome?</h1>
+        <h4><i>Enter in a number below to find out!</i></h4>
+    
+         <form action="">
 
-<button type="button" onclick="func()">Check</button>
-<div>
-    <label>Palindromic: <span id = "result"></span></label>
-</div>
+        <p>Your Number: <input type="text" id="userInput"></p>
 
-<p id="palin"></p>
+         </form>
+
+        <button type="button" onclick="palinDetermine()">Determine
+        </button>
+
+       <div>
+           <p><b>Is This A Palindrome: <span id = "answer"></span></b></p>
+      </div>
+
+  <p id="palin"></p>
 </div>
 
 
 </body>
 </html>
+
+
