@@ -1,37 +1,45 @@
-$(document).ready(function generate(){
-	var top, left, n, c;
-	var colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
-	n = 100;
-	for (var i = 0; i < n; i++) {
 
-  	var newdiv = $("<div class='child_div' style='width: 50px; height: 50px; position: absolute ;'></div>");
-  	 top = (Math.random() * 400) + "px";
-  	 left = (Math.random() * 400 )+ "px";
+$(document).ready(function boxCreation(){
+	
+	var numberofBoxes = 100;
+	
+	var boxColoursAvailable = ['581845', '900c3f', 'c70039', 'ff5733', 'ffc30f'];
+	
+	
+	for (var x = 0; x < numberofBoxes; x ++) {
+
+  		var div2 = $("<div class='child_div' style='height: 40px; width: 40px; position: absolute ;'></div>");
+  		var t = (Math.random() * 400) + "px";
+  	 	var l = (Math.random() * 400 )+ "px";
 
 
-	newdiv.css({
-	    "top": top,
-	    "left": left
-	});
+		div2.css(
+		{
+	   		"top": t,
+	   		"left": l});
 
-	c= Math.floor(Math.random() * colors.length);
-	var chosen_c=  colors[c] ;
-	$(newdiv).css('background-color', chosen_c ); 
-	$("#container").append(newdiv);
+	a = Math.floor(boxColoursAvailable.length * Math.random());
+	
+	var boxColour =  boxColoursAvailable[a] ;
+	
+	$(div2).css('background-color', boxColour); 
+	
+	$("#container").append(div2);
 
 }
 
 	$(".child_div").mouseover(function(){
+		
+		// When our element (box) does not have any more siblings, meaning that it is the last one, the alert "last child!" will pop up
 		if ($(this).is(':only-child')){
-			window.alert("Last One!");
-		}
-		$(this).remove();
-	});
+			window.alert("last child!");}
 
-	$("#btn1").click(function(){
-    generate();
-  	});
+		//When the mouse moves over a box, the box ix removed 
+		$(this).remove(); });
 
+	
+	$("#clickButton").click(function(){
+    boxCreation();	});
 
 
 });
