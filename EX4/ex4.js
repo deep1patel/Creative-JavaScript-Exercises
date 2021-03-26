@@ -16,7 +16,7 @@ $(document).ready(function generate(){
 
 	c= Math.floor(Math.random() * colors.length);
 	var chosen_c=  colors[c] ;
-	$(newdiv).css('background-color', chosen_c ); //getRandomColor);
+	$(newdiv).css('background-color', chosen_c ); 
 	$("#container").append(newdiv);
 
 }
